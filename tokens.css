@@ -1,0 +1,70 @@
+/* Hallmark tokens · custom theme · vibe: "near-black technical restraint, teal signal"
+ * paper: oklch(13% 0.010 200) · accent: oklch(77% 0.13 200)
+ * display: Space Grotesk · body: Geist · outlier: Geist Mono (wordmark + hero figures only)
+ * axes: dark / geometric-sans / cool · context: inferred (standing deXevel brand DNA)
+ * Every colour and font on the page references these names. No inline values.
+ */
+
+:root {
+  /* ---- Colour: paper (dark band, tinted toward the anchor hue 200) ---- */
+  --color-paper: oklch(13% 0.010 200);
+  --color-paper-2: oklch(16.5% 0.011 200);
+  --color-paper-3: oklch(20.5% 0.012 200);
+
+  /* ---- Colour: ink ---- */
+  --color-ink: oklch(93% 0.008 200);
+  --color-ink-2: oklch(78% 0.009 200);
+
+  /* ---- Colour: supporting greys (all tinted, never flat) ---- */
+  --color-rule: oklch(28% 0.011 200);
+  --color-rule-2: oklch(23% 0.010 200);
+  --color-muted: oklch(62% 0.010 200);
+  --color-neutral: oklch(48% 0.011 200);
+
+  /* ---- Colour: accent (signal teal/cyan, cool band) ---- */
+  --color-accent: oklch(77% 0.13 200);
+  --color-accent-ink: oklch(13% 0.010 200);
+  --color-focus: oklch(80% 0.18 200);
+
+  /* ---- Type: families (next/font variables are bound in app/layout.tsx) ---- */
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- Type: scale (ratio 1.25, display capped) ---- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: clamp(1.65rem, 2.4vw + 1rem, 2.44rem);
+  --text-display-s: clamp(2rem, 4.2vw + 0.75rem, 3.4rem);
+
+  /* ---- Space: 4pt scale ---- */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  /* ---- Rules & radius ---- */
+  --rule-hairline: 1px;
+  --rule-strong: 2px;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+}
