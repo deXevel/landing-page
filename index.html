@@ -1,13 +1,84 @@
-const CONTACT_URL = "https://www.dexevel.com/contact-us";
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asif Vudi — Build the software. Automate the work.</title>
+    <meta
+      name="description"
+      content="Custom software and business process automation for business owners in the UK and Ireland. Tell me what is taking too much time — I will figure out what should be built."
+    />
+    <meta name="application-name" content="Asif Vudi" />
+    <meta name="author" content="Asif Vudi" />
+    <meta
+      name="keywords"
+      content="custom software development, business process automation, internal tools, workflow automation, AI implementation, UK, Ireland"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.dexevel.com/" />
 
-export default function Home() {
-  return (
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.dexevel.com/" />
+    <meta property="og:site_name" content="Asif Vudi" />
+    <meta property="og:title" content="Asif Vudi — Build the software. Automate the work." />
+    <meta
+      property="og:description"
+      content="Custom software and business process automation for business owners in the UK and Ireland. Tell me what is taking too much time — I will figure out what should be built."
+    />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Asif Vudi — Build the software. Automate the work." />
+    <meta
+      name="twitter:description"
+      content="Custom software and business process automation for business owners in the UK and Ireland."
+    />
+
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Asif Vudi",
+        "jobTitle": "Software engineer and founder",
+        "url": "https://www.dexevel.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/asif-vudi",
+          "https://github.com/perceptronbd",
+          "https://dexevel.co",
+          "https://perceptron.site"
+        ],
+        "knowsAbout": [
+          "Custom software development",
+          "Business process automation",
+          "AI implementation",
+          "Internal tools and dashboards",
+          "API integrations",
+          "ERP and CRM systems"
+        ]
+      }
+    </script>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="wrap nav">
+      <a class="wordmark" href="./">Asif Vudi</a>
+      <a class="cta cta--primary cta--small" href="https://www.dexevel.com/contact-us">
+        Start a conversation
+        <span aria-hidden="true">→</span>
+      </a>
+    </header>
+
     <main id="main">
-      {/* ---------- Hero (H2 split diptych: text | proof column) ---------- */}
-      <section className="wrap split hero" aria-labelledby="hero-title">
-        <div className="split__a">
+      <!-- ---------- Hero (H2 split diptych: text | proof column) ---------- -->
+      <section class="wrap split hero" aria-labelledby="hero-title">
+        <div class="split__a">
           <h1 id="hero-title">Build the software. Automate the work.</h1>
-          <p className="hero__lede">
+          <p class="hero__lede">
             I’m Asif Vudi — a software engineer who builds the systems business
             owners don’t have time to spec. When work is eating your team’s
             hours — copying between systems, manual data entry, follow-ups,
@@ -15,65 +86,64 @@ export default function Home() {
             fixes it. Software, automation, AI, or a mix. You don’t have to
             know which.
           </p>
-          <div className="hero__actions">
-            <a className="cta cta--primary" href={CONTACT_URL}>
+          <div class="hero__actions">
+            <a class="cta cta--primary" href="https://www.dexevel.com/contact-us">
               Tell me what you’re trying to improve
             </a>
-            <a className="cta cta--link" href="#what-i-build">
+            <a class="cta cta--link" href="#what-i-build">
               See what I build
               <span aria-hidden="true">↓</span>
             </a>
           </div>
         </div>
-        <aside className="split__b" aria-label="Proof of work">
-          <p className="proof__title">Proof of work</p>
-          <ul className="proof__list">
+        <aside class="split__b" aria-label="Proof of work">
+          <p class="proof__title">Proof of work</p>
+          <ul class="proof__list">
             <li>
-              <span className="proof__figure">48</span>
-              <span className="proof__label">
+              <span class="proof__figure">48</span>
+              <span class="proof__label">
                 repositories shipped at Perceptron, across 15+ product lines
               </span>
             </li>
             <li>
-              <span className="proof__figure">3</span>
-              <span className="proof__label">
+              <span class="proof__figure">3</span>
+              <span class="proof__label">
                 years building and running software companies
               </span>
             </li>
             <li>
-              <span className="proof__figure">60 s</span>
-              <span className="proof__label">
+              <span class="proof__figure">60 s</span>
+              <span class="proof__label">
                 for the free website diagnostic at dexevel.co — real report, no
                 signup
               </span>
             </li>
           </ul>
-          <p className="proof__links">
-            Published case studies:{" "}
-            <a href="https://perceptron.site">perceptron.site</a>
+          <p class="proof__links">
+            Published case studies: <a href="https://perceptron.site">perceptron.site</a>
           </p>
         </aside>
       </section>
 
-      {/* ---------- Problem (flipped diptych: statement right, list left) ---------- */}
-      <section className="wrap split problem" aria-labelledby="problem-title">
-        <div className="split__a">
+      <!-- ---------- Problem (flipped diptych: statement right, list left) ---------- -->
+      <section class="wrap split problem" aria-labelledby="problem-title">
+        <div class="split__a">
           <h2 id="problem-title">
             Your team shouldn’t have to do work a computer can do.
           </h2>
-          <p className="problem__note">
+          <p class="problem__note">
             Somebody copies the same numbers into three systems every morning.
             Leads wait in an inbox until someone has time to sort them. The
             weekly report gets rebuilt by hand because the tool that should
             produce it doesn’t exist.
           </p>
-          <p className="problem__note">
+          <p class="problem__note">
             It doesn’t need a bigger team. It needs the repetitive part taken
             off people’s hands.
           </p>
         </div>
-        <div className="split__b">
-          <ul className="problem__list">
+        <div class="split__b">
+          <ul class="problem__list">
             <li>Copying data between systems by hand</li>
             <li>Repetitive data entry</li>
             <li>Leads processed manually, one at a time</li>
@@ -85,27 +155,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- What I build (break-out · spec sheet) ---------- */}
-      <section className="wrap services" id="what-i-build" aria-labelledby="build-title">
-        <div className="services__head">
+      <!-- ---------- What I build (break-out · spec sheet) ---------- -->
+      <section class="wrap services" id="what-i-build" aria-labelledby="build-title">
+        <div class="services__head">
           <h2 id="build-title">What I build</h2>
-          <p className="problem__note">
+          <p class="problem__note">
             The diagnosis decides which of these you need. Often it’s more than
             one.
           </p>
         </div>
 
-        <div className="spec-row">
+        <div class="spec-row">
           <h3>Custom software</h3>
-          <div className="spec-cell">
-            <p className="spec-label">When it makes sense</p>
+          <div class="spec-cell">
+            <p class="spec-label">When it makes sense</p>
             <p>
               Your business runs on spreadsheets, workarounds, or tools that no
               longer fit how the work actually happens.
             </p>
           </div>
-          <div className="spec-cell">
-            <p className="spec-label">What gets built</p>
+          <div class="spec-cell">
+            <p class="spec-label">What gets built</p>
             <p>
               Internal business applications, operational dashboards, customer
               portals, CRM and operations systems, custom web applications,
@@ -114,17 +184,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="spec-row">
+        <div class="spec-row">
           <h3>Automation</h3>
-          <div className="spec-cell">
-            <p className="spec-label">When it makes sense</p>
+          <div class="spec-cell">
+            <p class="spec-label">When it makes sense</p>
             <p>
               The same process runs again and again, and a person is the glue
               holding the systems together.
             </p>
           </div>
-          <div className="spec-cell">
-            <p className="spec-label">What gets built</p>
+          <div class="spec-cell">
+            <p class="spec-label">What gets built</p>
             <p>
               Workflow automation, data processing, lead management,
               notifications and follow-ups, reporting, API integrations, and
@@ -133,17 +203,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="spec-row">
+        <div class="spec-row">
           <h3>AI</h3>
-          <div className="spec-cell">
-            <p className="spec-label">When it makes sense</p>
+          <div class="spec-cell">
+            <p class="spec-label">When it makes sense</p>
             <p>
               The work needs judgement over information nobody has tagged —
               documents, messages, messy data.
             </p>
           </div>
-          <div className="spec-cell">
-            <p className="spec-label">What gets built</p>
+          <div class="spec-cell">
+            <p class="spec-label">What gets built</p>
             <p>
               AI-powered workflows, document and data processing,
               classification and extraction, assistants that answer questions
@@ -153,7 +223,7 @@ export default function Home() {
           </div>
         </div>
 
-        <p className="services__note">
+        <p class="services__note">
           Built with JavaScript, TypeScript, Python, Next.js, Node.js, NestJS,
           PostgreSQL, Supabase, REST APIs, n8n, Apify, Docker, and LLM APIs.
           The tools follow the problem — this list is here so you know the
@@ -161,18 +231,18 @@ export default function Home() {
         </p>
       </section>
 
-      {/* ---------- Approach ---------- */}
-      <section className="wrap split approach" aria-labelledby="approach-title">
-        <div className="split__a">
+      <!-- ---------- Approach ---------- -->
+      <section class="wrap split approach" aria-labelledby="approach-title">
+        <div class="split__a">
           <h2 id="approach-title">
             Not every business problem needs another automation tool.
           </h2>
-          <p className="approach__aside">
+          <p class="approach__aside">
             If I don’t think software is the answer, I’ll say so on the first
             call.
           </p>
         </div>
-        <div className="split__b approach__body">
+        <div class="split__b approach__body">
           <p>
             Most businesses don’t have an automation problem. They have a
             process problem that looks like a tool problem. The tool handles
@@ -194,20 +264,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Process (step sequence) ---------- */}
-      <section className="wrap split process" aria-labelledby="process-title">
-        <div className="split__a">
+      <!-- ---------- Process (step sequence) ---------- -->
+      <section class="wrap split process" aria-labelledby="process-title">
+        <div class="split__a">
           <h2 id="process-title">How I work</h2>
-          <p className="problem__note">
+          <p class="problem__note">
             Understand → Design → Build → Deploy → Maintain. You work with me
             directly the whole way — the person who maps the problem is the
             person who builds the system.
           </p>
         </div>
-        <div className="split__b">
-          <ol className="steps">
+        <div class="split__b">
+          <ol class="steps">
             <li>
-              <span className="steps__num">01</span>
+              <span class="steps__num">01</span>
               <div>
                 <h3>Understand</h3>
                 <p>
@@ -217,7 +287,7 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span className="steps__num">02</span>
+              <span class="steps__num">02</span>
               <div>
                 <h3>Design</h3>
                 <p>
@@ -227,7 +297,7 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span className="steps__num">03</span>
+              <span class="steps__num">03</span>
               <div>
                 <h3>Build</h3>
                 <p>
@@ -237,7 +307,7 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span className="steps__num">04</span>
+              <span class="steps__num">04</span>
               <div>
                 <h3>Deploy</h3>
                 <p>
@@ -247,7 +317,7 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span className="steps__num">05</span>
+              <span class="steps__num">05</span>
               <div>
                 <h3>Maintain</h3>
                 <p>
@@ -260,23 +330,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Things I’ve built (break-out · portfolio) ---------- */}
-      <section className="wrap work" id="work" aria-labelledby="work-title">
-        <div className="work__head">
+      <!-- ---------- Things I’ve built (break-out · portfolio) ---------- -->
+      <section class="wrap work" id="work" aria-labelledby="work-title">
+        <div class="work__head">
           <h2 id="work-title">Things I’ve built</h2>
-          <p className="problem__note">
+          <p class="problem__note">
             Real projects, in the same format every time: the problem, the
             system, what it does. Selected from three years of client and
             product work.
           </p>
         </div>
 
-        <div className="work__grid">
-          <article className="work-card">
-            <p className="work-card__cat">Business operations system</p>
+        <div class="work__grid">
+          <article class="work-card">
+            <p class="work-card__cat">Business operations system</p>
             <h3>
               ETC Organic
-              <span className="work-card__where">Bangladesh</span>
+              <span class="work-card__where">Bangladesh</span>
             </h3>
             <dl>
               <dt>Problem</dt>
@@ -298,16 +368,16 @@ export default function Home() {
                 Role-based permissions over orders, stock, and financial data.
               </dd>
             </dl>
-            <p className="work-card__stack">
+            <p class="work-card__stack">
               Architecture lead · React · Node · MongoDB · React Native
             </p>
           </article>
 
-          <article className="work-card">
-            <p className="work-card__cat">Custom internal application</p>
+          <article class="work-card">
+            <p class="work-card__cat">Custom internal application</p>
             <h3>
               Qashup
-              <span className="work-card__where">Thailand</span>
+              <span class="work-card__where">Thailand</span>
             </h3>
             <dl>
               <dt>Problem</dt>
@@ -329,17 +399,17 @@ export default function Home() {
                 monolith to microservices so teams could work in isolation.
               </dd>
             </dl>
-            <p className="work-card__stack">
+            <p class="work-card__stack">
               Module owner · 2 developers managed · Next.js · NestJS · Prisma ·
               PostgreSQL · Docker
             </p>
           </article>
 
-          <article className="work-card">
-            <p className="work-card__cat">Custom internal application</p>
+          <article class="work-card">
+            <p class="work-card__cat">Custom internal application</p>
             <h3>
               Rogue Tactical
-              <span className="work-card__where">USA</span>
+              <span class="work-card__where">USA</span>
             </h3>
             <dl>
               <dt>Problem</dt>
@@ -361,14 +431,14 @@ export default function Home() {
                 maintenance. Shipped in three months.
               </dd>
             </dl>
-            <p className="work-card__stack">MERN · TailwindCSS</p>
+            <p class="work-card__stack">MERN · TailwindCSS</p>
           </article>
 
-          <article className="work-card">
-            <p className="work-card__cat">Automated lead workflow</p>
+          <article class="work-card">
+            <p class="work-card__cat">Automated lead workflow</p>
             <h3>
               Automation Opportunity Scanner
-              <span className="work-card__where">deXevel</span>
+              <span class="work-card__where">deXevel</span>
             </h3>
             <dl>
               <dt>Problem</dt>
@@ -389,14 +459,14 @@ export default function Home() {
                 conversation I have.
               </dd>
             </dl>
-            <p className="work-card__stack">Live at dexevel.co</p>
+            <p class="work-card__stack">Live at dexevel.co</p>
           </article>
 
-          <article className="work-card">
-            <p className="work-card__cat">AI business assistant</p>
+          <article class="work-card">
+            <p class="work-card__cat">AI business assistant</p>
             <h3>
               Personal AI agent stack
-              <span className="work-card__where">deXevel</span>
+              <span class="work-card__where">deXevel</span>
             </h3>
             <dl>
               <dt>Problem</dt>
@@ -416,12 +486,12 @@ export default function Home() {
                 paid SDR subscriptions with systems I control.
               </dd>
             </dl>
-            <p className="work-card__stack">LLM APIs · n8n · Node.js</p>
+            <p class="work-card__stack">LLM APIs · n8n · Node.js</p>
           </article>
         </div>
 
-        {/* Testimonial slot — to confirm: client-approved quotes + names only. Never invent. */}
-        <p className="work__more">
+        <!-- Testimonial slot — to confirm: client-approved quotes + names only. Never invent. -->
+        <p class="work__more">
           Also built: Qravy — a digital menu and ordering system for
           restaurants. TreatMe — a marketplace for gifting meals at any
           restaurant. Shwapno — QR-driven ERP and e-commerce with live stock
@@ -430,9 +500,9 @@ export default function Home() {
         </p>
       </section>
 
-      {/* ---------- About ---------- */}
-      <section className="wrap split about" aria-labelledby="about-title">
-        <div className="split__a about__body">
+      <!-- ---------- About ---------- -->
+      <section class="wrap split about" aria-labelledby="about-title">
+        <div class="split__a about__body">
           <h2 id="about-title">About</h2>
           <p>
             I’ve spent three years building and running software companies. I
@@ -450,64 +520,64 @@ export default function Home() {
             deployment, and the conversations in between.
           </p>
           <p>
-            If you want to see how I think before we talk, run the scanner at{" "}
+            If you want to see how I think before we talk, run the scanner at
             <a href="https://dexevel.co">dexevel.co</a> on your own website.
             It’s free, it takes minutes, and it’s a fair sample of the work.
           </p>
         </div>
-        <div className="split__b">
-          <ul className="about__facts">
+        <div class="split__b">
+          <ul class="about__facts">
             <li>
-              <span className="about__fact-label">Founder</span>
-              <span className="about__fact-value">
+              <span class="about__fact-label">Founder</span>
+              <span class="about__fact-value">
                 deXevel — AI automation and revenue systems, December 2025 –
                 present
               </span>
             </li>
             <li>
-              <span className="about__fact-label">Co-founder</span>
-              <span className="about__fact-value">
+              <span class="about__fact-label">Co-founder</span>
+              <span class="about__fact-value">
                 Perceptron — software agency, August 2023 – present
               </span>
             </li>
             <li>
-              <span className="about__fact-label">Education</span>
-              <span className="about__fact-value">
+              <span class="about__fact-label">Education</span>
+              <span class="about__fact-value">
                 Computer Science Engineering, North South University
               </span>
             </li>
             <li>
-              <span className="about__fact-label">Market</span>
-              <span className="about__fact-value">
+              <span class="about__fact-label">Market</span>
+              <span class="about__fact-value">
                 Businesses across the UK and Ireland
               </span>
             </li>
             <li>
-              <span className="about__fact-label">Calls</span>
-              <span className="about__fact-value">Zoom or Google Meet</span>
+              <span class="about__fact-label">Calls</span>
+              <span class="about__fact-value">Zoom or Google Meet</span>
             </li>
           </ul>
         </div>
       </section>
 
-      {/* ---------- Final CTA ---------- */}
-      <section className="wrap split final" aria-labelledby="final-title">
-        <div className="split__a">
+      <!-- ---------- Final CTA ---------- -->
+      <section class="wrap split final" aria-labelledby="final-title">
+        <div class="split__a">
           <h2 id="final-title">
             Have a process that shouldn’t require so much manual work?
           </h2>
-          <p className="final__body">
+          <p class="final__body">
             Tell me how it currently works. You don’t need to know whether the
             answer is software, automation, or AI — that’s the diagnosis, and
             it comes first.
           </p>
         </div>
-        <div className="split__b final__actions">
-          <a className="cta cta--primary" href={CONTACT_URL}>
+        <div class="split__b final__actions">
+          <a class="cta cta--primary" href="https://www.dexevel.com/contact-us">
             Start a conversation
             <span aria-hidden="true">→</span>
           </a>
-          <div className="final__notes">
+          <div class="final__notes">
             <p>
               Not sure yet? Describe the process that annoys you most. That’s
               enough for a first conversation.
@@ -518,12 +588,30 @@ export default function Home() {
               open-ended hourly billing.
             </p>
             <p>
-              Prefer email?{" "}
+              Prefer email?
               <a href="mailto:asifvudi@gmail.com">asifvudi@gmail.com</a>
             </p>
           </div>
         </div>
       </section>
     </main>
-  );
-}
+
+    <footer class="wrap footer">
+      <div class="footer__row">
+        <a class="wordmark" href="./">Asif Vudi</a>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <span>Build the software. Automate the work.</span>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="https://www.dexevel.com/contact-us">Contact</a>
+          <a href="https://www.linkedin.com/in/asif-vudi">LinkedIn</a>
+          <a href="https://github.com/perceptronbd">GitHub</a>
+          <a href="https://dexevel.co">Scanner</a>
+          <a href="https://perceptron.site">Case studies</a>
+        </nav>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <span class="footer__credit">© 2026 Asif Vudi</span>
+      </div>
+    </footer>
+  </body>
+</html>

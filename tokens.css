@@ -26,7 +26,10 @@
   --color-accent-ink: oklch(13% 0.010 200);
   --color-focus: oklch(80% 0.18 200);
 
-  /* ---- Type: families (next/font variables are bound in app/layout.tsx) ---- */
+  /* ---- Type: families (faces self-hosted in fonts.css; variables bound here) ---- */
+  --font-space-grotesk: "Space Grotesk", "Space Grotesk Fallback";
+  --font-geist: "Geist", "Geist Fallback";
+  --font-geist-mono: "Geist Mono", "Geist Mono Fallback";
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
   --font-outlier: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;

@@ -6,55 +6,49 @@ and Ireland.
 
 ## Run it
 
+No build step, no dependencies. Open `index.html` in a browser, or serve the
+folder with any static server:
+
 ```bash
-npm install
-npm run dev     # http://localhost:3000
-npm test        # content + design-discipline checks (no test framework needed)
-npm run build   # static export -> out/
+python -m http.server 8000   # http://localhost:8000
+npm test                     # content + design-discipline checks (node only)
 ```
 
-The build is a static export (`output: "export"` in `next.config.ts`), so
-`out/` deploys to any static host — Vercel, Netlify, Cloudflare Pages, S3, or
-the dexevel.com server as plain files. `npm start` is not needed; serve `out/`.
+The repo root IS the deployable site. `index.html`, `styles.css`, `tokens.css`,
+`fonts.css`, and `fonts/` go to any static host — GitHub Pages, Netlify,
+Cloudflare Pages, S3, or the dexevel.com server — as plain files. All asset
+links are relative, so it works at any base path.
 
 ## Stack
 
-- Next.js (App Router) + TypeScript, React Server Components only — zero
-  client-side JavaScript ships.
+- Pure HTML + CSS. Zero frameworks, zero client-side JavaScript, zero build
+  step (standing rule: client-facing sites are plain HTML/CSS/JS).
 - Plain CSS with a locked token system (`tokens.css`). No CSS framework, no UI
-  library, no animation library. `app/globals.css` imports the tokens and
-  references colours/fonts by token name only.
-- Fonts via `next/font` (self-hosted at build, `display: swap`): Space Grotesk
-  (display), Geist (body), Geist Mono (outlier — wordmark + hero figures only).
+  library, no animation library. `styles.css` references colours/fonts by
+  token name only.
+- Fonts self-hosted in `fonts/` (`fonts.css`): Space Grotesk (display), Geist
+  (body), Geist Mono (outlier — wordmark + hero figures only), each with
+  metric-matched local fallbacks. No CDN.
 
 ## Structure
 
-| Path | What it is |
-| --- | --- |
-| `app/layout.tsx` | Metadata + Open Graph, JSON-LD (Person), nav (N9), footer (Ft2) |
-| `app/page.tsx` | The page: hero, problem, what I build, approach, process, work, about, final CTA |
-| `app/globals.css` | Page CSS (Hallmark stamp at top) |
-| `tokens.css` | Design tokens — colour, type, space, rules, motion |
-| `scripts/check.mjs` | `npm test`: banned words, CTA strings, structure, design discipline |
-| `docs/cro-prd-critique.md` | CRO scorecards (pre/post) from the PRD critic pass |
+- `index.html` — the whole page: hero, problem, what I build, approach,
+  process, portfolio, about, final CTA. Metadata + Open Graph + JSON-LD in
+  `<head>`.
+- `tokens.css` — design tokens (colour, type scale, space, rules, motion).
+- `styles.css` — all component styles (hallmark Split Studio macrostructure).
+- `fonts.css` + `fonts/` — self-hosted font faces.
+- `scripts/check.mjs` — `npm test`: banned words, CTA hierarchy, document
+  structure, stack discipline (no framework, no JS), hallmark design gates,
+  responsive affordances, repo hygiene.
+- `docs/cro-prd-critique.md` — CRO critique scorecard (PRD-mode pass before
+  the first line of code).
 
-## Content rules (do not break)
+## Deploy notes
 
-- Every project fact traces to `Asif_Vudi_Master_CV` / the founder profile.
-  Never invent clients, metrics, testimonials, or results. The testimonial slot
-  in `app/page.tsx` is marked as a placeholder — fill it only with
-  client-approved quotes.
-- Banned words (PRD voice rules): delve, elevate, streamline, synergy,
-  seamlessly, tailored solutions, cutting-edge, digital transformation, unlock
-  your potential, leverage the power of AI, end-to-end. `npm test` enforces this.
-- Market framing is UK + Ireland. Asif's location is deliberately not stated.
-
-## Before deploying
-
-1. `CONTACT_URL` appears in `app/layout.tsx` and `app/page.tsx` — currently
-   `https://www.dexevel.com/contact-us`. Update if the contact destination
-   changes.
-2. `metadataBase` in `app/layout.tsx` is `https://www.dexevel.com`. Set the
-   final canonical URL, and add an `og:image` (1200×630) once a deploy URL
-   exists — the slot is intentionally empty rather than faked.
-3. Run `npm test && npm run build`.
+- `out/` is a leftover checkout of the `gh-pages` branch from the previous
+  Next.js deployment. It is stale — redeploy by copying the static files to
+  the `gh-pages` branch (no `.nojekyll`/`basePath` concerns with plain files,
+  though keeping `.nojekyll` is harmless).
+- Source of truth: `C:\Users\Asif\Projects\landing-page`
+  (github.com/deXevel/landing-page).

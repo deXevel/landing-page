@@ -4,13 +4,13 @@
  * axes: dark / geometric-sans / cool · nav: N9 edge-aligned minimal · footer: Ft2 inline rule single line
  * diptych rows alternate direction (problem row flipped); 2 deliberate full-width break-outs (services, work grid)
  * enrichment: none (typography only) · motion: composed — micro hover/focus only, no reveals
+ * vanilla port: plain HTML/CSS/JS, no framework, no build step (tokens.css + fonts.css linked directly)
  * Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4
  * contrast: pass (40–41) · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48)
  * responsive: pass (49) · mobile: pass (34, 49, 50–57) · icons: pass (30) · states: default·hover·focus·active·disabled
  * studied: no · context: inferred (audience: UK/IE business owners · use: start a conversation · tone: technical)
  */
 
-@import "../tokens.css";
 
 /* ---------- Base ---------- */
 
