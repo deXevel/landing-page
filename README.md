@@ -46,6 +46,7 @@ npm run qa        # release QA: keyboard, contrast, responsive, metadata (needs 
 | `scripts/og-card.html` | source of the share card; regenerate `og-image.png` with headless Chrome |
 | `scripts/serve.mjs` | zero-dependency dev server (`npm run dev`) |
 | `scripts/build.mjs` | validation build (`npm run build`) |
+| `scripts/deploy.mjs` | publishes `out/` to the `gh-pages` branch (`npm run deploy`) |
 | `out/` | build output (gitignored) — a clean deployable copy |
 
 ### Design tokens
@@ -109,28 +110,28 @@ works at any base path. The canonical repository is
 ### GitHub Pages (`gh-pages` branch)
 
 The live site is served from the `gh-pages` branch at
-`https://dexevel.github.io/landing-page/`. In a clone where `out/` is a
-checkout of that branch (as in the original working copy), deploy with:
+`https://dexevel.github.io/landing-page/`. Deploy with:
 
 ```bash
-npm run build                    # validation build — writes the site into out/
-git -C out add -A
-git -C out commit -m "deploy: <what changed>"
-git -C out push
+npm run deploy                    # optional message: npm run deploy "deploy: <what changed>"
 ```
 
-First deploy from a stale checkout: delete everything inside `out/` except
-`.git/` and `.nojekyll` before running the build, so no old artifacts
-survive. Keep `.nojekyll` at the branch root (harmless, and required if any
-underscore-prefixed files are ever added). No `basePath` is needed — plain
-files with relative asset paths work at any base.
+`scripts/deploy.mjs` runs the validation build (which writes `out/`), clones
+the `gh-pages` branch into a temp directory, replaces its contents with
+`out/` (keeping `.nojekyll`), commits, and pushes. It needs git push
+credentials for `github.com/deXevel/landing-page`. Note that `npm run build`
+wipes `out/` on every run — `out/` is build output only, never a checkout.
+No `basePath` is needed — plain files with relative asset paths work at any
+base.
 
 ### Share card (`og:image`)
 
 `og-image.png` (1200×630) is a real asset rendered from `scripts/og-card.html`
 with the site's own fonts and design tokens. The Open Graph and Twitter tags
 point at `https://www.dexevel.com/og-image.png`, matching the canonical URL —
-make sure the file is published at that path when deploying. To regenerate it
+make sure the file is published at that path when deploying (it also ships
+with the site itself at `https://dexevel.github.io/landing-page/og-image.png`).
+To regenerate it
 after a design change (headless Chrome or Edge):
 
 ```bash
