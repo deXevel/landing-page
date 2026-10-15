@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- OG share card source (1200x630). Regenerate the PNG with headless Chrome:
+     chrome --headless=new --screenshot=og-image.png --window-size=1200,630 --hide-scrollbars scripts/og-card.html
+     (or msedge with the same flags). Uses the site's own fonts + design tokens. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../tokens.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 72px 80px;
+        background: var(--color-paper);
+        border: 2px solid var(--color-rule);
+        font-family: var(--font-body);
+      }
+      .wordmark {
+        font-family: var(--font-outlier);
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: var(--color-ink);
+      }
+      .rule {
+        width: 96px;
+        height: 2px;
+        background: var(--color-accent);
+        margin-bottom: 28px;
+      }
+      h1 {
+        font-family: var(--font-display);
+        font-size: 84px;
+        font-weight: 600;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        font-style: normal;
+        color: var(--color-ink);
+      }
+      h1 .signal {
+        color: var(--color-accent);
+      }
+      .foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 32px;
+        font-size: 22px;
+        color: var(--color-muted);
+      }
+      .foot .domain {
+        font-family: var(--font-outlier);
+        font-size: 20px;
+        color: var(--color-muted);
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="wordmark">Asif Vudi</p>
+    <div>
+      <div class="rule"></div>
+      <h1>Build the software.<br /><span class="signal">Automate the work.</span></h1>
+    </div>
+    <div class="foot">
+      <p>Custom software and business process automation for business owners in the UK and Ireland.</p>
+      <p class="domain">dexevel.com</p>
+    </div>
+  </body>
+</html>

@@ -1,9 +1,13 @@
 {
   "name": "asif-vudi-landing",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Personal landing page for Asif Vudi — Build the software. Automate the work.",
+  "type": "module",
   "scripts": {
-    "test": "node scripts/check.mjs"
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/check.mjs",
+    "qa": "node scripts/qa.mjs"
   }
 }
